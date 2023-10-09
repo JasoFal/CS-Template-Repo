@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ShapeTracker.Models;
+using ProjectName.Models;
 
-namespace ShapeTracker.Tests
+namespace ProjectName.Tests
 {
   [TestClass]
-  public class TriangleTests
+  public class ProjectTests
   {
     // Tests will go here!
   }
