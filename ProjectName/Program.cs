@@ -2,9 +2,19 @@ namespace ProjectName
 {
   class Program
   {
-    static void Main()
+    static void Main(string[] arg)
     {
-      // UI code goes here.
+      WebApplicationBuilder builder = WebApplication.CreateBuilder(arg);
+      builder.Services.AddControllersWithViews();
+      WebApplication app = builder.Build();
+      // app.UseDeveloperExceptionPage();
+      app.UseHttpsRedirection();
+      app.UseRouting();
+      app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+      );
+      app.Run();
     }
   }
 }
